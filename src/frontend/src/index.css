@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 15 8% 4%;
+    --foreground: 30 15% 92%;
+    --card: 15 10% 7%;
+    --card-foreground: 30 15% 92%;
+    --popover: 15 10% 7%;
+    --popover-foreground: 30 15% 92%;
+    --primary: 35 95% 55%;
+    --primary-foreground: 15 8% 4%;
+    --secondary: 15 12% 12%;
+    --secondary-foreground: 30 15% 92%;
+    --muted: 15 10% 10%;
+    --muted-foreground: 30 8% 55%;
+    --accent: 5 90% 55%;
+    --accent-foreground: 30 15% 92%;
+    --destructive: 5 85% 50%;
+    --destructive-foreground: 30 15% 92%;
+    --border: 15 12% 16%;
+    --input: 15 12% 12%;
+    --ring: 35 95% 55%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Exo 2", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Rajdhani", sans-serif;
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 20px oklch(55% 0.95 35 / 0.4), 0 0 40px
+      oklch(55% 0.95 35 / 0.2);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px oklch(55% 0.9 5 / 0.4), 0 0 40px oklch(55% 0.9 5 / 0.2);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px oklch(55% 0.95 35 / 0.8);
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(
+        oklch(30% 0.02 35 / 0.15) 1px,
+        transparent 1px
+      ), linear-gradient(90deg, oklch(30% 0.02 35 / 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .progress-bar-fill {
+    background: linear-gradient(90deg, oklch(55% 0.9 5), oklch(55% 0.95 35));
+  }
+}
